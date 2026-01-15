@@ -1,0 +1,84 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.catalog {
+  width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.catalog-header {
+  background: #1e6dfd;
+  color: #fff;
+  padding: 30px;
+}
+
+.catalog-header h1 {
+  margin-bottom: 6px;
+}
+
+.catalog-header span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.catalog-filter {
+  padding: 25px 30px;
+}
+
+.catalog-filter label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.catalog-filter select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+}
+
+.catalog-filter select:focus {
+  outline: none;
+  border-color: #1e6dfd;
+}
+
+.catalog-table {
+  padding: 0 30px 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f1f3f5;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-top: 1px solid #dee2e6;
+}
+
+tr:hover {
+  background: #f8f9fa;
+}
+
+.empty {
+  padding: 40px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}

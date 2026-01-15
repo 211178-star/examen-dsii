@@ -1,0 +1,46 @@
+<div class="page-container">
+  <div class="catalog-card">
+
+    <div class="catalog-header">
+      <h2>📦 Catálogo de Productos y Servicios</h2>
+      <p>Seleccione una categoría para visualizar los registros</p>
+    </div>
+
+    <div class="catalog-body">
+
+      <label>Seleccione una categoría</label>
+      <select
+        class="form-control"
+        [(ngModel)]="selectedCategoryId"
+        (ngModelChange)="onCategoryChange()"
+      >
+        <option [ngValue]="null">Seleccione una opción</option>
+        <option *ngFor="let c of categories" [ngValue]="c.id">
+          {{ c.name | titlecase }}
+        </option>
+      </select>
+
+      <table class="product-table" *ngIf="items.length > 0">
+        <thead>
+          <tr>
+            <th>Producto / Servicio</th>
+            <th>Precio</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of items">
+            <td>{{ i.name }}</td>
+            <td>S/ {{ i.price }}</td>
+            <td>{{ i.tipo }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="empty-state" *ngIf="items.length === 0 && selectedCategoryId">
+        No hay registros para esta categoría
+      </div>
+
+    </div>
+  </div>
+</div>
